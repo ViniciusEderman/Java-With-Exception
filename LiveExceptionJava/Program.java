@@ -20,6 +20,14 @@ public class Program {
         double withDrawLimit = sc.nextDouble();
 
         ExercicioManeiraOne acc = new ExercicioManeiraOne(number, holder, balance, withDrawLimit);
+        
+        System.out.println(); // saltando uma linha //
+        System.out.println("Informe o valor do saque: ");
+        double amount = sc.nextDouble();
+        acc.withDraw(amount);
+        System.out.println("Novo saldo: "  + acc.getBalance());
+
+    sc.close();
     }  
 }
  
