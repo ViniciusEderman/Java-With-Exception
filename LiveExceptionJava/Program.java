@@ -8,7 +8,8 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Informe os dados da sua conta: ");
+        System.out.print("Informe os dados da sua conta: ");
+        System.out.println("");
         System.out.println("Numero: ");
         int number = sc.nextInt();
         System.out.println("Titular: ");
@@ -19,14 +20,20 @@ public class Program {
         System.out.println("Limite de saque: ");
         double withDrawLimit = sc.nextDouble();
 
-        ExercicioManeiraOne acc = new ExercicioManeiraOne(number, holder, balance, withDrawLimit);
+        ContaBancaria acc = new ContaBancaria(number, holder, balance, withDrawLimit);
         
         System.out.println(); // saltando uma linha //
         System.out.println("Informe o valor do saque: ");
         double amount = sc.nextDouble();
-        acc.withDraw(amount);
-        System.out.println("Novo saldo: "  + acc.getBalance());
 
+        String error = acc.validateWithDraw(amount);
+        if (error != null) {
+            System.out.println(error);
+        }
+        else{
+            acc.withDraw(amount);
+            System.out.printf("Novo saldo: %.2f%n", acc.getBalance());
+        }
     sc.close();
     }  
 }

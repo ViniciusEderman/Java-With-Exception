@@ -1,13 +1,13 @@
 package LiveExceptionJava; 
 
-public class ExercicioManeiraOne {
+public class ContaBancaria {
     private Integer number;
     private String holder;
     private Double balance;
     private Double withDrawLimit;
     
 
-    public ExercicioManeiraOne(Integer number, String holder, Double balance, Double withDrawLimit) {
+    public ContaBancaria(Integer number, String holder, Double balance, Double withDrawLimit) {
         this.number = number;
         this.holder = holder;
         this.balance = balance;
@@ -63,4 +63,14 @@ public class ExercicioManeiraOne {
     public void withDraw(double amount) {
         balance -= amount;
     }
+
+    public String validateWithDraw(double amount) {
+        if (amount > getWithDrawLimit()) {
+            return "Erro no saque. A quantia excede o limite de saque";
+        }
+        if(amount > getBalance()){
+            return "Erro de saque. Saldo insuficiente";
+        }
+        return null;
+    }    
 }
