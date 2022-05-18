@@ -31,13 +31,13 @@ public class whileExemple {
         Caso digitado qualquer coisa que não seja m/f retormar para que o usuário digite novamente. */
 
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Digite o seu sexo, apenas M para homem e F para mulher: ");
-        String sex = keyboard.nextLine();
+        String sex = "";
        
-            while(sex != "F" ||sex != "M") {
+            while(sex != "F" && sex != "M") {
                 System.out.println("Digite o seu sexo, apenas M para homem e F para mulher: ");
                 sex = keyboard.nextLine();
             }
+
             System.out.println("O seu sexo foi registrado com sucesso");
         keyboard.close();    
     }
