@@ -37,7 +37,6 @@ public class whileExemple {
                 System.out.println("Digite o seu sexo, apenas M para homem e F para mulher: ");
                 sex = keyboard.nextLine();
             }
-
             System.out.println("O seu sexo foi registrado com sucesso");
         keyboard.close();    
     }
