@@ -43,7 +43,7 @@ public class whileExemple {
 
 } */
 
-
+package javaMonitoria;
 import java.util.Scanner;
 
 public class whileExemple {
