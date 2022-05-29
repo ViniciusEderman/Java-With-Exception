@@ -15,6 +15,6 @@
   -Tratamento de expcetions,
   -Programação orientada a objetos com Java(Polimorfismo, herança, abstração e encapsulamento)
 
-# Obrigado por visitar, volte sempre
+# Obrigado por visitar, volte sempre 🤞
 
-# Lembrando, há outros projetinhos por aqui, pode dar uma olhadinha <3 
+# Lembrando, há outros projetinhos por aqui, pode dar uma olhadinha ❤️
